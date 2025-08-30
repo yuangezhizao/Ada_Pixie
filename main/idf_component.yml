@@ -3,14 +3,18 @@ dependencies:
     path: ${IDF_PATH}/examples/common_components/protocol_examples_common
 
   espressif/gmf_ai_audio:
+    override_path: ../dependencies/esp-gmf/elements/gmf_ai_audio
     version: "~0.7"
     rules:
       - if: "target in [esp32p4, esp32s3, esp32]"
   espressif/esp_audio_simple_player:
+    override_path: ../dependencies/esp-gmf/packages/esp_audio_simple_player
     version: "^0.9.4"
   espressif/gmf_app_utils:
+    override_path: ../dependencies/esp-gmf/packages/gmf_app_utils # Note: Modified
     version: "^0.7"
   espressif/gmf_loader:
+    override_path: ../dependencies/esp-gmf/packages/gmf_loader
     version: "^0.7"
   espressif/esp_coze:
     version: "^0.6"

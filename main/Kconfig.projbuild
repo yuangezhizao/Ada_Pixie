@@ -5,11 +5,14 @@ menu "Example Audio Configuration"
 #
 choice
     prompt "Audio Conversation Trigger Mode"
+    default VOICE_WAKEUP_MODE if IDF_TARGET_ESP32S3
+    default VOICE_WAKEUP_MODE if IDF_TARGET_ESP32C3
     default CONTINUOUS_CONVERSATION_MODE
 
 config VOICE_WAKEUP_MODE
     bool "Wake Word Mode"
-    select SR_WN_WN9_HILEXIN
+    select SR_WN_WN9_HILEXIN if IDF_TARGET_ESP32S3
+    select SR_WN_WN9S_HILEXIN if IDF_TARGET_ESP32C3
     help
       System is activated by a predefined wake word (e.g. 'Hi Lexin').
 
@@ -98,10 +101,10 @@ config ENABLE_RECORDER_DEBUG
 
 config COZE_BOT_ID
     string "COZE_BOT_ID"
-    default "7239506**************"
+    default "7544002988382257191"
 
 config COZE_ACCESS_TOKEN
     string "COZE_ACCESS_TOKEN"
-    default "pat_******************"
+    default "pat_<rm>"
 
 endmenu
