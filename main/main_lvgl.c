@@ -1,3 +1,4 @@
+#include "i2c_driver.h"
 #include "GMT154_07.h"
 
 static const char* TAG = "MAIN-LGVL";
@@ -6,7 +7,7 @@ void app_main(void)
 {
 #if CONFIG_I2C_COMMUNICATION_METHOD_BUILTIN_RW || CONFIG_I2C_COMMUNICATION_METHOD_CALLBACK_RW
 
-    // ESP_ERROR_CHECK(i2c_drv_init());
+    ESP_ERROR_CHECK(i2c_drv_init());
 
     ESP_LOGI(TAG, "I2C initialized successfully");
 
