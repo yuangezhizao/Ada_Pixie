@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "url": "https://github.com/yuangezhizao/codec_board.git",
+    "path": "dependencies/codec_board",
+    "branch": "dev"
+  },
+  {
+    "url": "https://github.com/yuangezhizao/esp-gmf.git",
+    "path": "dependencies/esp-gmf",
+    "branch": "dev"
+  }
+]
