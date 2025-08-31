@@ -29,6 +29,8 @@
 #include "esp_lcd_panel_ops.h"
 #include "esp_lvgl_port.h"
 
+#include "ui.h"
+
 /* LCD size */
 #define EXAMPLE_LCD_H_RES (240)
 #define EXAMPLE_LCD_V_RES (240)
